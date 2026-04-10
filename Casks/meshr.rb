@@ -10,6 +10,10 @@ cask "meshr" do
   app "Meshr.app"
 
   postflight do
+    # Strip the quarantine xattr so Gatekeeper doesn't block the unsigned bundle
+    # (Meshr is not yet notarized by Apple Developer ID).
+    system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{appdir}/Meshr.app"]
+
     # Symlink CLI tools to /usr/local/bin
     system_command "/bin/ln", args: ["-sf", "#{appdir}/Meshr.app/Contents/MacOS/meshr", "/usr/local/bin/meshr"], sudo: true
     system_command "/bin/ln", args: ["-sf", "#{appdir}/Meshr.app/Contents/MacOS/meshr-daemon", "/usr/local/bin/meshr-daemon"], sudo: true
