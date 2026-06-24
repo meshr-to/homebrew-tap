@@ -7,7 +7,7 @@ cask "meshr" do
   desc "WireGuard-based mesh networking — GUI, CLI, and daemon"
   homepage "https://meshr.to/"
 
-  depends_on macos: ":big_sur"
+  depends_on macos: :big_sur
 
   app "Meshr.app"
 
