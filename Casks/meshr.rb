@@ -1,6 +1,6 @@
 cask "meshr" do
-  version "0.7.72"
-  sha256 "07f2b1b9d178b8a3dc60ae0a4d889b3802782511b89f6c52117035ce13e291cd"
+  version "0.7.73"
+  sha256 "5ef85d70b5229f900492987775d013a4ccd54f9798c358225037ce0bfd5ed2be"
 
   url "https://get.meshr.to/releases/v#{version}/Meshr-v#{version}-macOS.dmg"
   name "Meshr"
