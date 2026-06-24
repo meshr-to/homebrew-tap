@@ -4,7 +4,7 @@ cask "meshr" do
 
   url "https://get.meshr.to/releases/v#{version}/Meshr-v#{version}-macOS.dmg"
   name "Meshr"
-  desc "WireGuard-based mesh networking — GUI, CLI, and daemon"
+  desc "Zero-trust WireGuard mesh for your devices, SSH, and services"
   homepage "https://meshr.to/"
 
   depends_on macos: :big_sur
